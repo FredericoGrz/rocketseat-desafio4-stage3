@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza verticalmente */
+  height: 100vh;
+}
+
+.bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* Centraliza horizontalmente dentro da div */
+  align-items: center;
+  /* Centraliza verticalmente dentro da div */
+}
+
+.buracos {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.buracos .buraco {
+  display: flex;
+  flex-basis: 25%;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  height: 200px;
+}
+
+.buracos .buraco img {
+  position: absolute;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.buracos .buraco:hover img:nth-child(2) {
+  animation: moleAnimation 300ms backwards;
+}
+
+.buracos .buraco:hover img:nth-child(3) {
+  animation: moleAnimation 300ms 300ms backwards;
+}
+
+.buracos .buraco:hover img:nth-child(4) {
+  animation: moleAnimation 300ms 600ms backwards;
+}
+
+.buracos .buraco:hover img:nth-child(5) {
+  animation: moleAnimation 300ms 900ms backwards;
+}
+
+.buracos .buraco:hover img:nth-child(6) {
+  animation: moleAnimation 300ms 1.2s backwards;
+}
+
+@keyframes moleAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
